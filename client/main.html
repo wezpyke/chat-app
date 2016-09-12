@@ -1,0 +1,22 @@
+<head>
+  <title>chat-app</title>
+</head>
+
+<body>
+  <h1>Chat app</h1>
+
+  {{> input}}
+  {{> messages}}
+</body>
+
+<template name="input">
+  <p>
+    Message: <input type="text" name="message" id="message">
+  </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <p><strong>{{name}}:</strong> {{message}}</p>
+  {{/each}}
+</template>
